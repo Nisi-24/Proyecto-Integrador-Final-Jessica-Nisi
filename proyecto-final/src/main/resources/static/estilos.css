@@ -1,0 +1,322 @@
+body {
+  background-image: url('imagenes/comicsf.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+
+  cursor: url('imagenes/thanos.cur'), auto;
+}
+
+.search-icon{
+  color: #f36304;
+}
+
+.imagen-libro {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  transition: transform 0.3s ease, z-index 0s ease 0.3s; 
+  position: relative; 
+}
+
+.imagen-libro:hover {
+  transform: scale(2); /* zoom al pasar el cursor */
+  z-index: 10; 
+  position: absolute; 
+}
+
+
+button, a {
+  cursor: url('imagenes/thanos.cur'), pointer !important; 
+}
+
+
+.color-btn {
+  background: linear-gradient(rgba(255, 81, 0, 0.822), rgba(255, 177, 104, 0.7));
+  color: white; 
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.color-btn:hover {
+  background-color: #f36304; 
+  color: white; 
+}
+
+
+.btn-main {
+
+  background: linear-gradient(rgba(255, 81, 0, 0.822), rgba(255, 177, 104, 0.7));
+  border-radius: 100px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+
+}
+
+.btn-alquilar{
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(rgba(255, 81, 0, 0.822), rgba(255, 177, 104, 0.7));
+  border-radius: 100px;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 10px;
+  color: #fff;
+}
+
+.btn-alquilar.disabled {
+  background: linear-gradient(rgba(128, 128, 128, 0.8), rgba(192, 192, 192, 0.7)); 
+  color: #fff; 
+  cursor: not-allowed; 
+  border: none; 
+  opacity: 0.7; 
+}
+
+.btn-alquilar:hover {
+  background-color: #f36304; 
+  color: white; 
+}
+
+
+.btn-swal {
+  background: linear-gradient(rgba(255, 81, 0, 0.822), rgba(255, 177, 104, 0.7));
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-swal:hover {
+  background: linear-gradient(rgba(255, 81, 0.9), rgba(255, 177, 104, 0.9));
+}
+
+
+button[disabled][data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  background: #4b5fd3;
+  color: #f6f6fd;
+  padding: 5px 8px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 1000;
+  transform: translate(-50%, -125%);
+  left: 50%;
+  top: 100%;
+  opacity: 1 !important;
+  visibility: visible;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+button[disabled][data-tooltip] {
+  position: relative; 
+}
+
+
+.imagen-libro {
+  width: 50px;
+  height: 75px;
+  object-fit: cover;
+  transition: transform 0.3s ease, z-index 0s ease 0.3s; /* Transición suave para el zoom */
+  position: relative; 
+}
+
+.imagen-libro:hover {
+  transform: scale(2); /* Hace zoom al pasar el cursor */
+  z-index: 10;
+  position: absolute; 
+}
+
+
+table {
+  overflow: visible; 
+}
+
+td {
+  overflow: visible !important; 
+}
+
+th {
+  text-align: center;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .tooltip {
+    text-align: center; 
+    position: relative; 
+  }
+
+
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #6273d4;
+    color: #f6f6fd;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .mapa:hover,
+  .wrapper .mapa:hover .tooltip,
+  .wrapper .mapa:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.modal-confirmacion {
+    background-color: #fff;
+    margin: 10% auto;
+    border: 1px solid #888;
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+}
+  
+.modal-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  margin-top: 20px;
+}
+
+.close {
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  color: #aaa; 
+  font-size: 28px; 
+  font-weight: bold; 
+  cursor: pointer; 
+  transition: color 0.3s ease; 
+}
+
+.close:hover, 
+.close:focus {
+  color: black; 
+  text-decoration: none; 
+}

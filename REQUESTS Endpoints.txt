@@ -1,0 +1,102 @@
+REQUESTS:
+
+BIBLIOTECA
+
+GET
+http://localhost:8080/api/bibliotecas/traer
+
+POST
+http://localhost:8080/api/bibliotecas
+{
+  "nombre": "Biblioteca Central",
+  "direccion":"Av.Hola 1234"
+}
+
+DELETE
+http://localhost:8080/api/bibliotecas/delete/{id}
+
+PUT
+http://localhost:8080/api/bibliotecas/editar/{id}
+
+PRESTAMO
+GET
+http://localhost:8080/api/prestamos/traer
+
+POST
+http://localhost:8080/api/prestamos
+
+{
+  "id_usuario":1,
+  "id_libro":1,
+  "estado":"disponible",
+  "precio":120,
+  "dias":1,
+  "precioTotal":120
+}
+
+DELETE
+http://localhost:8080/api/prestamos/delete/{id}
+
+PUT
+http://localhost:8080/api/prestamos/editar/{id}
+{
+  "id_usuario":"1",
+  "id_libro":"3",
+  "estado":"alquilado",
+  "precio": 20,
+  "dias": 2,
+  "precioTotal": 40
+}
+
+LIBRO
+
+GET
+http://localhost:8080/api/libros/traer
+
+POST
+http://localhost:8080/api/libros
+
+{
+  "nombre":"Don Quijote de la Mancha",
+  "autor":"Miguel de Cervantes",
+  "editorial":"Ediciones Colihue",
+  "tipo":"Literatura"
+}
+
+DELETE
+http://localhost:8080/api/libros/delete/{id}
+
+PUT
+http://localhost:8080/api/libros/editar/{id}
+
+{
+  "nombre": "La Niebla", 
+  "autor": "Stephen King",
+  "editorial":"deBolsillo",
+  "tipo":"Literatura"
+}
+
+USUARIO
+
+GET
+http://localhost:8080/api/usuarios/traer
+
+POST
+http://localhost:8080/api/usuarios
+
+{
+  "nombre":"Viktor",
+  "apellido":"Volkov",
+  "dni":12345678,
+  "telefono":1123456789,
+  "email":"viktorv@gmail.com"
+}
+
+PUT
+http://localhost:8080/api/usuarios
+
+{
+  "nombre":"Juan",
+  "apellido":"Perez",
+  "dni":12345678
+}
